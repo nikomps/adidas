@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adidas Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #111;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background: linear-gradient(90deg, #000, #222);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Adidas Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+    }
+
+    .logo div {
+      background: #fff;
+      height: 25px;
+      width: 25px;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      animation: bounce 1s infinite ease-in-out alternate;
+    }
+
+    .logo div:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .logo div:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    .logo span {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0);
+      }
+      to {
+        transform: translateY(-10px);
+      }
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #999;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: url('https://brand.assets.adidas.com/image/upload/f_auto,q_auto,fl_lossy/enUS/Images/originals-fw21-stan-smith-ss21-launch-hp-mh-d_tcm221-673354.jpg') no-repeat center center/cover;
+      position: relative;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-content h1 {
+      font-size: 4.5rem;
+      text-transform: uppercase;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .hero-content p {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero-content button {
+      margin-top: 30px;
+      padding: 15px 40px;
+      font-size: 1rem;
+      background: #000;
+      border: 2px solid #fff;
+      color: #fff;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background 0.3s ease, color 0.3s ease;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+
+    .hero-content button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section {
+      padding: 80px 10%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      color: #999;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .card {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      transform: scale(1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      padding: 20px;
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    footer {
+      background: #111;
+      color: #999;
+      padding: 20px 10%;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div></div>
+      <div></div>
+      <div></div>
+      <span>Adidas</span>
+    </div>
+    <nav>
+      <a href="#roblox-jerseys">Roblox Jerseys</a>
+      <a href="#roblox-shorts">Roblox Shorts</a>
+      <a href="#mps-jerseys">MPS Jerseys</a>
+      <a href="#shop">Shop</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Impossible is Nothing</h1>
+      <p>Explore the future of sportswear.</p>
+      <button>Discover Now</button>
+    </div>
+  </div>
+
+  <section class="section" id="roblox-jerseys">
+    <h2>Roblox Jerseys</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Roblox Jersey 1">
+        <h3>Classic Jersey</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Roblox Jersey 2">
+        <h3>Pro Kit</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="roblox-shorts">
+    <h2>Roblox Shorts</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Roblox Shorts 1">
+        <h3>Performance Shorts</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Roblox Shorts 2">
+        <h3>Street Style</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="mps-jerseys">
+    <h2>MPS Jerseys</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="MPS Jersey 1">
+        <h3>Team Edition</h3>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="MPS Jersey 2">
+        <h3>Elite Kit</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2024 Adidas. All Rights Reserved.</p>
+    <p>Follow us on <a href="#">Instagram</a>, <a href="#">Facebook</a>, and <a href="#">Twitter</a>.</p>
+  </footer>
+</body>
+</html>
